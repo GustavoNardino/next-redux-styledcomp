@@ -23,6 +23,7 @@ const Title: StyledComponent<"h1", any, {}, never> = styled.h1`
 const Wrapper: StyledComponent<"section", any, {}, never> = styled.section`
   padding: 4em;
   background: ${dados.estilo2};
+  backgound-color: #123aaa;
 `;
 
 export const S = {

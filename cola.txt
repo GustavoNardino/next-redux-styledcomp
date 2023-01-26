@@ -1,0 +1,3 @@
+import {useRouter} from 'next/router'
+	para pegar url dinâmicas www.a.com/[id]/page
+
