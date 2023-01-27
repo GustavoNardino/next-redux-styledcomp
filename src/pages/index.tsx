@@ -3,6 +3,8 @@
 // import { Inter } from '@next/font/google'
 // import styles from '../styles/Home.module.css'
 
+import CardsPanel from '../components/CardsPanel'
+import Header from '../components/header'
 import { S } from '../styles/teste'
 
 // const inter = Inter({ subsets: ['latin'] })
@@ -10,11 +12,10 @@ import { S } from '../styles/teste'
 export default function Home() {
   return (
     <>
-      <S.Wrapper>
-        <S.Title>
-          Hello World!
-        </S.Title>
-      </S.Wrapper>
+
+      <Header />
+      <CardsPanel />
+
     </>
   )
 }

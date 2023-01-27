@@ -1,11 +1,27 @@
 import React from 'react'
+import { S } from '../styles/header'
 
-type Props = {}
+interface IApiObject {
+  image1: string,
+  image2: string,
+}
 
-const header = (props: Props) => {
+const headerDados: IApiObject = {
+  image1: 'a',
+  image2: 'a'
+}
+
+type Props = {
+
+}
+
+const Header = ({ }: Props) => {
   return (
-    <div></div>
+    <S.Container>
+      <S.Image src={headerDados.image1} />
+      <S.Image src={headerDados.image2} />
+    </S.Container>
   )
 }
 
-export default header
+export default Header

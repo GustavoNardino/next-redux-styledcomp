@@ -9,7 +9,7 @@ interface dadosType {
 //ESTILOS VINDOS DO STATE
 const dados: dadosType = {
   estilo1: 'center',
-  estilo2: 'yellow',
+  estilo2: 'white',
 }
 
 //DESENHA O LAYOUT BÁSICO E DINAMIZA SÓ O QUE QUISER
@@ -22,8 +22,7 @@ const Title: StyledComponent<"h1", any, {}, never> = styled.h1`
 
 const Wrapper: StyledComponent<"section", any, {}, never> = styled.section`
   padding: 4em;
-  background: ${dados.estilo2};
-  backgound-color: #123aaa;
+  backgound-color: ${dados.estilo2};
 `;
 
 export const S = {
