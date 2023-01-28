@@ -1,3 +1,8 @@
 import {useRouter} from 'next/router'
 	para pegar url dinâmicas www.a.com/[id]/page
+	query para manipular parametros na url
+* dentro da pasta src/pages/... as rotas são automáticas
 
+import Link from 'nexr/link'
+	tag para navegação
+	navegação dentro da function aula #62	

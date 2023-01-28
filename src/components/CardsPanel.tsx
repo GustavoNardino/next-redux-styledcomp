@@ -1,23 +1,23 @@
 import React from 'react'
 import Card from './Card'
 import { S } from '../styles/cardPanel'
-interface IApiObject {
+import { objeto_dados } from '../services/objeto'
 
-}
 
-const cardPanelDados: IApiObject = {
+const CardsPanel = () => {
 
-}
-
-type Props = {}
-
-const CardsPanel = ({ }: Props) => {
     return (
         <>
             <S.Title>Promoção</S.Title>
             <S.Container>
-                <Card />
-                
+                {
+                    objeto_dados.cardList.map((item: any, k: number) => {
+                        return (
+                            <Card key={k} text={item.text} image={item.image} estiloID={item.estiloID} />
+                        )
+                    })
+                }
+
             </S.Container>
         </>
     )

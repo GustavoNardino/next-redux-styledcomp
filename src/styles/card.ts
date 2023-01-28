@@ -1,13 +1,6 @@
 import styled, { StyledComponent } from 'styled-components'
 
-interface IApiObject {
-    estiloscontainer: string
-}
-
-const headerEstilos: IApiObject = {
-    estiloscontainer: `background-color: green;`
-}
-
+import { objeto_estilos } from '../services/objeto'
 
 const Container: StyledComponent<"div", any, {}, never> = styled.div`
   //fixo
@@ -20,21 +13,26 @@ const Container: StyledComponent<"div", any, {}, never> = styled.div`
   justify-content: space-evenly;
   margin: 5px;
   //dinâmico
-  ${headerEstilos.estiloscontainer}
+  background-color: ${objeto_estilos.cardList[0].container_background_color};
+
 `;
 
 const Image: StyledComponent<"img", any, {}, never> = styled.img`
   width: 50%;
   height: 150px;
   margin: 3px;
+  //dinamico
+
 `;
 const Text: StyledComponent<"p", any, {}, never> = styled.p`
   width: 50%;
   margin: 3px;
+  //dinamico
+  color: ${objeto_estilos.cardList[0].font_color};
 `;
 
 export const S = {
-    Container,
-    Image,
-    Text,
+  Container,
+  Image,
+  Text,
 }
