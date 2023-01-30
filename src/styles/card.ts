@@ -1,6 +1,6 @@
 import styled, { StyledComponent } from 'styled-components'
 
-import { objeto_estilos } from '../services/objeto'
+import { objeto_estilos } from '../utils/interfaces'
 
 const Container: StyledComponent<"div", any, {}, never> = styled.div`
   //fixo

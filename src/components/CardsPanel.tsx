@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from './Card'
 import { S } from '../styles/cardPanel'
-import { objeto_dados } from '../services/objeto'
+import { objeto_dados } from '../utils/interfaces'
 
 
 const CardsPanel = () => {
