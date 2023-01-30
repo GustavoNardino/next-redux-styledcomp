@@ -1,8 +1,31 @@
 import React from 'react'
 import Card from './Card'
 import { S } from '../styles/cardPanel'
-import { objeto_dados } from '../utils/interfaces'
 
+export interface ICardDados {
+    text: string,
+    image: string,
+    estiloID: number,
+}
+
+export const objeto_dados: ICardDados[] = [
+    {
+        text: 'objeto 1',
+        image: 'image 1',
+        estiloID: 0,
+    },
+    {
+        text: 'objeto 1',
+        image: 'image 1',
+        estiloID: 0,
+    },
+    {
+        text: 'objeto 1',
+        image: 'image 1',
+        estiloID: 0,
+    },
+
+]
 
 const CardsPanel = () => {
 
@@ -11,9 +34,14 @@ const CardsPanel = () => {
             <S.Title>Promoção</S.Title>
             <S.Container>
                 {
-                    objeto_dados.cardList.map((item: any, k: number) => {
+                    objeto_dados.map((item: ICardDados) => {
                         return (
-                            <Card key={k} text={item.text} image={item.image} estiloID={item.estiloID} />
+                            <Card
+                                key={item.estiloID}
+                                text={item.text}
+                                image={item.image}
+                                estiloID={item.estiloID}
+                            />
                         )
                     })
                 }

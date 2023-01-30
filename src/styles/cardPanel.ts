@@ -1,16 +1,13 @@
 import styled, { StyledComponent } from 'styled-components'
+import { IcardPanelEstilos } from '../utils/interfaces';
 
-interface IApiObject {
-    estiloscontainer: string,
-    estilosTitulo: string
-}
-
-const cardPanelEstilos: IApiObject = {
-    estiloscontainer: `background-color: blue;`,
-    estilosTitulo: `
-        font-size: 20px; 
-        color: white; 
-        text-align: center;
+const cardPanelEstilos: IcardPanelEstilos = {
+  estiloscontainer: `background-color: blue;`,
+  estilosTitulo: `
+    background-color: blue;
+    font-size: 20px; 
+    color: white; 
+    text-align: center;
     `,
 }
 
@@ -22,20 +19,17 @@ const Container: StyledComponent<"div", any, {}, never> = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    /* grid-template-columns: repeat(3, 1fr);   */
-    /* grid-template-columns:  30%; */
     grid-auto-columns: 33.3%;
   //dinâmico
   ${cardPanelEstilos.estiloscontainer}
 `;
 
 const Title: StyledComponent<"h2", any, {}, never> = styled.h2`
-  ${cardPanelEstilos.estilosTitulo}
   //dinâmico
-  ${cardPanelEstilos.estiloscontainer}
-`;
+  ${cardPanelEstilos.estilosTitulo}
+  `;
 
 export const S = {
-    Container,
-    Title,
+  Container,
+  Title,
 }
